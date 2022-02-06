@@ -11,8 +11,12 @@ O TeleZap é um sistema no qual consiste na troca de mensagens entre clientes de
  * RF02 - Realizar a troca de mensagens entre apenas CLIENTES.
  * RF03 - Realizar a troca de mensagens dentro do grupo.
  * RF04 - Atualizar troca de mensagens em tempo real.
+ 
+ ## Diagrama de classes preliminar
  <p align = "center">
- <img src = "src/assets/DiagramaDeClasseT4.drawio.png"> </img>
+ <img width ="470" src = "src/Assets/DiagramaDeClasseT4.drawio.png">
  </p>
- Ramon Vinicius Marqueviki e João Pedro Solagna
+ 
+ 
+ ##### <a href="https://www.linkedin.com/in/ramon-vinicius-marqueviski-a4ba801a1/">Ramon Vinicius Marqueviski</a> e João Pedro Solagna
  
