@@ -24,5 +24,5 @@ O TeleZap é um sistema no qual consiste na troca de mensagens entre clientes de
 
  
  
- ##### <a href="https://www.linkedin.com/in/ramon-vinicius-marqueviski-a4ba801a1/">Ramon Vinicius Marqueviski</a> e João Pedro Solagna
+ ##### <a href="https://www.linkedin.com/in/ramon-vinicius-marqueviski-a4ba801a1/">Ramon Vinicius Marqueviski</a>
  
