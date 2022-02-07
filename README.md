@@ -19,7 +19,7 @@ O TeleZap é um sistema no qual consiste na troca de mensagens entre clientes de
  
  ## Diagramas de sequeência preliminar
   <p align = "center">
- <img width ="470" src = "src/Assets/ Diagrama2Sequencia.drawio.png">
+ <img width ="470" src = "src/Assets/Diagrama2Sequencia.drawio.png">
  </p>
 
  
