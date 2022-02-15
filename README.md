@@ -1,4 +1,5 @@
 # Trabalho 3 realizado para Desenvolvimento de Sistemas Paralelos e Distribuídos.
+ ## Professor favor acessar o outro git <a href="https://github.com/RamonMarqueviski/chatComThreadsSocketsRamon">Correto</a>
  ## TeleZap
  
 O TeleZap é um sistema no qual consiste na troca de mensagens entre clientes dentro de um servidor, o qual pode aceitar várias conexões dentro do mesmo servidor possibilitando a conversa entre duas pessoas ou também a criação de um grupo, o qual deve retratar as mensagens em tempo real que estão sendo enviadas, é utilizado a linguagem JAVA com o objetivo do trabalho utilizar de Sockets e Threads como aprendido em aula anteriormente.
