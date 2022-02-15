@@ -19,6 +19,7 @@ import models.Pessoa;
 public class servidorChat extends Thread {
 
     private final int PORT = 4000;
+    private String ip;
     private ServerSocket serverSocket;
     private final List<ClienteSocket> clientes;
     private List<Pessoa> pessoasCadastradas;
@@ -27,16 +28,17 @@ public class servidorChat extends Thread {
         pessoasCadastradas.add(pessoa);
     }
 
-    public servidorChat() {
+    public servidorChat(String ip) {
         clientes = new ArrayList<>();
         pessoasCadastradas = new ArrayList<>();
+        this.ip = ip;
     }
 
     @Override
     public void run() {
         InetAddress addr;
         try {
-            addr = InetAddress.getByName("127.0.0.1");
+            addr = InetAddress.getByName(ip);
             serverSocket = new ServerSocket(PORT, 40, addr);
 
             System.out.println("Servidor de chat iniciado em: " + serverSocket.getInetAddress().getHostAddress()

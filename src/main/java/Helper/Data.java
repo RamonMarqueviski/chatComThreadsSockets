@@ -11,6 +11,10 @@ package Helper;
  * @author ramom
  */
 public class Data {
-    public static final String IP_SERVIDOR = "127.0.0.1";
+    public static String IP_SERVIDOR;
     public static final int PORTA_SERVIDOR = 4000;
+    
+    public Data(String ip){
+        IP_SERVIDOR = ip;
+    }
 }

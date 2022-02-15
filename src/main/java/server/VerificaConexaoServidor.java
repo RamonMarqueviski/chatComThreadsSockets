@@ -68,7 +68,7 @@ public class VerificaConexaoServidor extends Thread {
                         if (umaPessoa.getPORT() == Integer.parseInt(msg.split("/")[1])) {
                             String nome = umaPessoa.getNome();
                             mandaMensagemTodos(nome + " saiu do servidor", umaPessoa.getPORT());
-                            Socket socket = new Socket(Data.IP_SERVIDOR, umaPessoa.getPORT());
+                            Socket socket = new Socket(clienteSocket.getIP(), umaPessoa.getPORT());
                             ClienteSocket clienteSocketRes = new ClienteSocket(socket);
                             pessoasCadastradas.remove(umaPessoa);
                             clienteSocketRes.close();
@@ -89,7 +89,7 @@ public class VerificaConexaoServidor extends Thread {
                         if (msg.split("/")[1].equals(umaPessoa.getNome())
                                 && msg.split("/")[2].equals(umaPessoa.getTelefone())
                                 && umaPessoa.getPORT() == Integer.parseInt(msg.split("/")[3])) {
-                            Socket socket = new Socket(Data.IP_SERVIDOR, umaPessoa.getPORT());
+                            Socket socket = new Socket(clienteSocket.getIP(), umaPessoa.getPORT());
                             ClienteSocket clienteSocketRes = new ClienteSocket(socket);
                             // envia mensagem de volta
                             clienteSocketRes.enviarMensagem("Você foi logado com sucesso!/" + umaPessoa.getPORT());
@@ -99,7 +99,7 @@ public class VerificaConexaoServidor extends Thread {
                         }
                     }
                     if (entrou == false) {
-                        Socket socket = new Socket(Data.IP_SERVIDOR, Integer.parseInt(msg.split("/")[3]));
+                        Socket socket = new Socket(clienteSocket.getIP(), Integer.parseInt(msg.split("/")[3]));
                         ClienteSocket clienteSocketRes = new ClienteSocket(socket);
                         mandaMensagemParaCliente(clienteSocketRes,
                                 "Erro:Nenhum usuário foi encontrado com esse nome e telefone.");
@@ -116,7 +116,7 @@ public class VerificaConexaoServidor extends Thread {
                         }
                     }
                     // trata ip
-                    Socket socket = new Socket(Data.IP_SERVIDOR, Integer.parseInt(msg.split("/")[3]));
+                    Socket socket = new Socket(clienteSocket.getIP(), Integer.parseInt(msg.split("/")[3]));
                     ClienteSocket clienteSocketRes = new ClienteSocket(socket);
                     // envia mensagem de volta
                     mandaMensagemParaCliente(clienteSocketRes, "Você foi cadastrado com sucesso!");
