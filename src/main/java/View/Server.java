@@ -111,6 +111,7 @@ public class Server extends javax.swing.JFrame {
         try {
             if (servidor != null) {
                 servidor.fechar();
+                System.out.println("Servidor fechando");
                 servidor.stop();
                 this.dispose();
                 System.exit(0);
