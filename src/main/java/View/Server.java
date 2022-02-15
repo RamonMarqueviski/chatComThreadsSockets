@@ -7,7 +7,6 @@ package View;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import server.servidorChat;
 
 /**
@@ -36,8 +35,6 @@ public class Server extends javax.swing.JFrame {
         btLigar = new javax.swing.JButton();
         btDesligar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        tfIP = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -58,8 +55,6 @@ public class Server extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Servidor");
 
-        jLabel2.setText("IP");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -71,30 +66,21 @@ public class Server extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfIP)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(32, 32, 32)
-                                .addComponent(btLigar))
-                            .addComponent(btDesligar, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))))
-                .addContainerGap(144, Short.MAX_VALUE))
+                        .addComponent(btLigar)
+                        .addGap(59, 59, 59)
+                        .addComponent(btDesligar)))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tfIP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(btLigar)
-                .addGap(18, 18, 18)
-                .addComponent(btDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(103, 103, 103))
+                    .addComponent(btLigar)
+                    .addComponent(btDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(144, 144, 144))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -113,12 +99,10 @@ public class Server extends javax.swing.JFrame {
 
     private servidorChat servidor = null;
     private void btLigarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLigarActionPerformed
-        if (!tfIP.getText().equals("")) {
-            servidor = new servidorChat(tfIP.getText());
-            servidor.run();
-        }else{
-            JOptionPane.showMessageDialog(null, "É preciso colocar um ip");
-        }
+
+        servidor = new servidorChat();
+
+        servidor.run();
 
 
     }//GEN-LAST:event_btLigarActionPerformed
@@ -176,8 +160,6 @@ public class Server extends javax.swing.JFrame {
     private javax.swing.JButton btDesligar;
     private javax.swing.JButton btLigar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tfIP;
     // End of variables declaration//GEN-END:variables
 }

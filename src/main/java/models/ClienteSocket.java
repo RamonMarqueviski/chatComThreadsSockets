@@ -17,12 +17,6 @@ public class ClienteSocket {
         this.out = new PrintWriter(
                 socket.getOutputStream(), true);
     }
-    public String getIP(){
-        String a = socket.getInetAddress().toString();
-        String aux = a.split("/")[1];
-        String aux2 = aux.split(":")[0];
-        return aux2;
-    }
 
     public SocketAddress getRemoteSocketAdress() {
         return socket.getRemoteSocketAddress();

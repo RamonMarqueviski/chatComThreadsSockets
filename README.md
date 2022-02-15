@@ -22,12 +22,20 @@ O TeleZap é um sistema no qual consiste na troca de mensagens entre clientes de
 
  ## Diagrama de classes
  <p align = "center">
+<<<<<<< HEAD
  <img width ="470" src = "src/main/Assets/DiagramasDeClasse.drawio.png">
+=======
+ <img width ="470" src = "src/main/java/Assets/DiagramasDeClasse.drawio.png">
+>>>>>>> parent of 536e384 (Alterações realizadas para rodar em servidores diferentes)
  </p>
  
  ## Diagramas de sequência
   <p align = "center">
+<<<<<<< HEAD
  <img width ="470" src = "src/main/Assets/DiagramasDeSequencia.drawio.png">
+=======
+ <img width ="470" src = "src/main/java/Assets/DiagramasDeSequencia.drawio.png">
+>>>>>>> parent of 536e384 (Alterações realizadas para rodar em servidores diferentes)
  </p>
 
  
